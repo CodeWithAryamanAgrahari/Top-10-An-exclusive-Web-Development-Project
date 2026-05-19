@@ -167,7 +167,7 @@ nav .underline-link:hover {
 
 /* Light mode: make nav link text white on hover for contrast */
 #theme-switch:checked ~ .page nav .underline-link:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .home-link {
@@ -297,6 +297,10 @@ nav svg {
     background-color: #fff;
     border: 2px solid #5e5e5e;
     box-shadow: rgb(0 0 0 / 21%) 8px 9px 8px 1px;
+  }
+
+  #theme-switch:checked ~ .page nav .underline-link:hover {
+    color: #000;
   }
 
   .underline-link {
