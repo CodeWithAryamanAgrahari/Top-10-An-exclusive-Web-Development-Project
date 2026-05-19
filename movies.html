@@ -1,445 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>top 10 moveis of the World</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-      :root {
-        --color-1: #07092a;
-        --accent-color: #e74c3c;
-        --text-color: #ecf0f1;
-        --background-color: #0f1432;
-        --font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana,
-          sans-serif;
-        --primary-color: #c277fb;
-        --secondary-color: #27ae60;
-        --hover-color: #8e44ad;
-        --btn-color: #2980b9;
-        --section-color: #e23b15;
-        --sec-icon-fill: #e7d512;
-        --article-color: #33a90f;
-        --primary: #3524ca;
-        --accent-purple: #23c7dd;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>top 10 moveis of the World</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-      /* Light theme overrides */
-      #theme-switch:checked ~ .page {
-        --color-1: #ffffff;
-        --text-color: #1f2430;
-        --background-color: #f1f4f8;
-        --secondary-color: #1a7f37;
-        --hover-color: #6f42c1;
-      }
+    :root {
+      --color-1: #07092a;
+      --accent-color: #e74c3c;
+      --text-color: #ecf0f1;
+      --background-color: #0f1432;
+      --font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana,
+        sans-serif;
+      --primary-color: #c277fb;
+      --secondary-color: #27ae60;
+      --hover-color: #8e44ad;
+      --btn-color: #2980b9;
+      --section-color: #e23b15;
+      --sec-icon-fill: #e7d512;
+      --article-color: #33a90f;
+      --primary: #3524ca;
+      --accent-purple: #23c7dd;
+    }
 
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-      }
+    /* Light theme overrides */
+    #theme-switch:checked~.page {
+      --color-1: #ffffff;
+      --text-color: #1f2430;
+      --background-color: #f1f4f8;
+      --secondary-color: #1a7f37;
+      --hover-color: #6f42c1;
+    }
 
-      html {
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-      }
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: var(--font-family);
-        background: radial-gradient(
-          circle at top,
-          #232f78 0%,
-          #2635a8 55%,
-          #1b34b1 100%
-        );
-        color: var(--text-color);
-        overflow-x: hidden;
-        transition: background-color 0.4s ease, color 0.4s ease;
-      }
+    html {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-      .page {
-        min-height: 100vh;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background: radial-gradient(circle at top,
+          #2dc0c8 0%,
+          #2a3ed0 55%,
+          #1b97b1 100%);
+      color: var(--text-color);
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
 
-        
-        background:radial-gradient(
-                circle at top,
-                rgb(25, 11, 220) 20%,
-                rgb(100, 197, 51) 55%,
-                rgb(0, 0, 0) 100%
-            );
-        
-        color: var(--text-color);
-        transition: background-color 0.4s ease, color 0.4s ease;
-        display: flex;
-        flex-direction: column;
+    .page {
+      min-height: 100vh;
 
 
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
-      }
+    .theme-switch-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
 
-      .theme-switch-input {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-      }
+    #theme-switch:focus-visible~.page nav .theme-toggle {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 4px;
+      background-color: #342645;
+    }
 
-      #theme-switch:focus-visible ~ .page nav .theme-toggle {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 4px;
-        background-color: #342645;
-      }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
+    a {
+      color: white;
+      transition: 0.6s ease;
+      text-decoration: none;
+    }
 
-      a {
-        color: white;
-        transition: 0.6s ease;
-        text-decoration: none;
-      }
+    .fa {
+      color: #e0aaff;
+    }
 
-      .fa {
-        color: #e0aaff;
-      }
+    .backdrop-filter {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px,
+          transparent 0);
+      background-size: 120px 120px;
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-      .backdrop-filter {
-        position: fixed;
-        inset: 0;
-        background-image: radial-gradient(
-          rgba(255, 255, 255, 0.08) 1px,
-          transparent 0
-        );
-        background-size: 120px 120px;
-        opacity: 0.2;
-        pointer-events: none;
-        z-index: -1;
-      }
-
-      /* Navigation Selectors */
-      /* The CSS code snippet provided is defining the styling for a navigation bar and sidebar for a
+    /* Navigation Selectors */
+    /* The CSS code snippet provided is defining the styling for a navigation bar and sidebar for a
 website. Here is a breakdown of what the code is doing: */
-      nav {
-        height: 60px;
-        background-color: var(--color-1);
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: sticky;
-        left: 0;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        gap: 8px;
-        transition: background-color 0.4s ease, box-shadow 0.3s ease,
-          backdrop-filter 0.3s ease;
-        -webkit-backdrop-filter: blur(6px) saturate(140%);
-        backdrop-filter: saturate(140%) blur(6px);
-        box-shadow: 0 2px 10px var(--color-1);
-        margin-bottom: 3rem;
-      }
+    nav {
+      height: 60px;
+      background-color: var(--color-1);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: sticky;
+      left: 0;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      gap: 8px;
+      transition: background-color 0.4s ease, box-shadow 0.3s ease,
+        backdrop-filter 0.3s ease;
+      -webkit-backdrop-filter: blur(6px) saturate(140%);
+      backdrop-filter: saturate(140%) blur(6px);
+      box-shadow: 0 2px 10px var(--color-1);
+      margin-bottom: 3rem;
+    }
 
-      .links-container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: var(--color-1);
-      }
+    .links-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: var(--color-1);
+    }
 
-      nav a {
-        height: 100%;
-        padding: 0px 20px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: var(--text-color);
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.7s ease;
-        gap: 10px;
-      }
+    nav a {
+      height: 100%;
+      padding: 0px 20px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.7s ease;
+      gap: 10px;
+    }
 
-      nav .underline-link:hover {
-        background: radial-gradient(
-          circle at top,
-          #2b2eb5 25%,
-          #16c881 60%,
-          #050918 100%
-        );
-        transform: scale(1.05);
-        color: var(--text-color);
-        transition: all 0.7s ease;
-        gap: 10px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px #35374b;
-        text-decoration: none;
-        overflow: hidden;
-      }
+    nav .underline-link:hover {
 
-      /* Light mode: make nav link text white on hover for contrast */
-      #theme-switch:checked ~ .page nav .underline-link:hover {
-        color: #ffffff;
-      }
+      transform: scale(1.05);
+      color: var(--text-color);
+      transition: all 0.7s ease;
+      gap: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px #35374b;
+      text-decoration: none;
+      overflow: hidden;
+    }
 
-      .home-link {
-        margin-right: auto;
-      }
-      .logo-icon:hover {
-        text-decoration: none;
-        background-color: var(--color-1);
-      }
+    /* Light mode: make nav link text white on hover for contrast */
+    #theme-switch:checked~.page nav .underline-link:hover {
+      color: #ffffff;
+    }
 
-      .logo-icon {
-        gap: 0;
-      }
+    .home-link {
+      margin-right: auto;
+    }
 
-      nav svg {
-        fill: var(--text-color);
-      }
-      /* Theme toggle button */
-      .theme-toggle {
-        margin-right: 10px;
-        background-color: #111323;
-        border: 1px solid #494c5f;
-        color: var(--text-color);
-        padding: 8px 12px;
-        border-radius: 999px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.25s ease, border-color 0.25s ease,
-          transform 0.2s ease, color 0.25s ease;
-      }
+    .logo-icon:hover {
+      text-decoration: none;
+      background-color: var(--color-1);
+    }
 
-      .theme-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.55);
-        transform: translateY(-1px);
-      }
+    .logo-icon {
+      gap: 0;
+    }
 
-      .theme-toggle i {
-        pointer-events: none;
-        font-size: 16px;
-      }
+    nav svg {
+      fill: var(--text-color);
+    }
 
-      .theme-toggle .icon-light {
-        display: none;
-      }
+    /* Theme toggle button */
+    .theme-toggle {
+      margin-right: 10px;
+      background-color: #111323;
+      border: 1px solid #494c5f;
+      color: var(--text-color);
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.25s ease, border-color 0.25s ease,
+        transform 0.2s ease, color 0.25s ease;
+    }
 
-      .open-sidebar-button,
-      .close-sidebar-button {
-        display: none;
-      }
+    .theme-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.55);
+      transform: translateY(-1px);
+    }
 
-      #theme-switch:checked ~ .page nav .theme-toggle {
-        background-color: rgba(31, 36, 48, 0.08);
-        border-color: rgba(31, 36, 48, 0.24);
-      }
+    .theme-toggle i {
+      pointer-events: none;
+      font-size: 16px;
+    }
 
-      #theme-switch:checked ~ .page nav .theme-toggle:hover {
-        background-color: rgba(31, 36, 48, 0.18);
-      }
+    .theme-toggle .icon-light {
+      display: none;
+    }
 
-      #theme-switch:checked ~ .page nav .theme-toggle .icon-light {
-        display: inline-block;
-      }
+    .open-sidebar-button,
+    .close-sidebar-button {
+      display: none;
+    }
 
-      #theme-switch:checked ~ .page nav .theme-toggle .icon-dark {
-        display: none;
-      }
+    #theme-switch:checked~.page nav .theme-toggle {
+      background-color: rgba(31, 36, 48, 0.08);
+      border-color: rgba(31, 36, 48, 0.24);
+    }
 
-      #sidebar-active {
-        display: none;
-      }
-      h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 60px;
-        margin-top: 20px;
-      }
-      p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 30px;
-        margin-top: 30px;
-        font-size: 22px;
-        color: #cacdd1;
-      }
-      .op h2 {
-        font-size: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-      }
-      .op span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-        color: #cacdd1;
-      }
-      .moveis {
-        border-radius: 20px;
-        padding: 20px;
-        background:radial-gradient(
-                circle at top,
-                rgb(51, 46, 126) 20%,
-                rgb(5, 219, 112) 55%,
-                rgb(0, 0, 0) 100%
-            );
-        width: 90%;
-        max-width: 1400px;
-        margin: 30px auto;
-        position: relative;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        border: 4px solid;
-        border-image: linear-gradient(
-            45deg,
-            var(--primary),
-            var(--accent-purple),
-            var(--section-color),
-            var(--sec-icon-fill)
-          )
-          1;
-      }
-      .moveis span {
-        margin-top: 15px;
-        font-size: 20px;
-        color:var(--accent-purple);
-      }
-      .ojas {
-        margin-top: 15px;
-        font-size: 18px;
-        color:#cacdd1;
-        display: flex;
-        justify-content: flex-start;
-        gap: 40px;
-      }
-    </style>
-  </head>
-  <body>
-    <input
-      type="checkbox"
-      id="theme-switch"
-      class="theme-switch-input"
-      aria-label="Toggle light mode"
-    />
-    <div class="page" id="top">
-      <nav>
-        <input type="checkbox" id="sidebar-active" />
-        <label for="sidebar-active" class="open-sidebar-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="32px"
-            viewBox="0 -960 960 960"
-            width="32px"
-            fill="#e3e3e3"
-          >
+    #theme-switch:checked~.page nav .theme-toggle:hover {
+      background-color: rgba(31, 36, 48, 0.18);
+    }
+
+    #theme-switch:checked~.page nav .theme-toggle .icon-light {
+      display: inline-block;
+    }
+
+    #theme-switch:checked~.page nav .theme-toggle .icon-dark {
+      display: none;
+    }
+
+    #sidebar-active {
+      display: none;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      margin-top: 20px;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 22px;
+      color: #cacdd1;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 30px;
+    }
+
+    .op h2 {
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .op span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      color: #cacdd1;
+    }
+
+    .moveis {
+      border-radius: 20px;
+      padding: 20px;
+
+      width: 90%;
+      max-width: 1400px;
+      margin: 30px auto;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border: 4px solid;
+      border-image: linear-gradient(45deg,
+          var(--primary),
+          var(--accent-purple),
+          var(--section-color),
+          var(--sec-icon-fill)) 1;
+    }
+
+    .moveis span {
+      margin-top: 15px;
+      font-size: 20px;
+      color: var(--accent-purple);
+    }
+
+    .ojas {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #cacdd1;
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+
+    .ojas span {
+      color: #cacdd1;
+    }
+
+    .anime {
+      border-radius: 30px;
+      padding: 5px;
+      border-color: #23c7dd;
+      color: rgb(28, 6, 30);
+      font-size: 18px;
+      border: 2px solid blue;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: radial-gradient(circle at top,
+          #158ea9 25%,
+          #0c8db5 60%,
+          #050918 100%);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .anime-container {
+      display: flex;
+      gap: 40px;
+      margin-top: 15px;
+    }
+
+    .ban {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .ban p {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 15px;
+      color: #cacdd1;
+      text-align: left;
+    }
+
+    .ban p span {
+      display: block;
+      line-height: 1.4;
+      color: #cacdd1;
+    }
+    .p-1 {
+      font-size: 18px;
+      color: #cacdd1;
+      text-align: left;
+      margin-top: 15px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    h2 {
+      font-size: 30px;
+      color: #cacdd1;
+      text-align: left;
+      margin-top: 15px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      
+    }
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+    }
+    .ban .vaibhav {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 22px 28px;
+  border-radius: 24px;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  color: #f5f7fa;
+  margin-top: 8px;
+  border-left: 5px solid #23c7dd;
+}
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="theme-switch" class="theme-switch-input" aria-label="Toggle light mode" />
+  <div class="page" id="top">
+    <nav>
+      <input type="checkbox" id="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <label for="sidebar-active" id="overlay"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3">
             <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </label>
-        <label for="sidebar-active" id="overlay"></label>
-        <div class="links-container">
-          <label for="sidebar-active" class="close-sidebar-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="32px"
-              viewBox="0 -960 960 960"
-              width="32px"
-              fill="#e3e3e3"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-          </label>
-          <a class="logo-icon" href="index.html">
-            <img
-              src="Images/Logo.png"
-              alt="Logo Image"
-              width="80px"
-              height="80px"
-            />
-            <h3>INDIA</h3>
-          </a>
-          <a href="index.html" class="underline-link home-link">
-            <i class="fas fa-home"></i>Home
-          </a>
-          <a href="#" class="underline-link">
-            <i class="fas fa-info-circle"></i>About
-          </a>
-          <a href="#" class="underline-link">
-            <i class="fas fa-blog"></i>Blog
-          </a>
-          <a href="#" class="underline-link">
-            <i class="fas fa-sign-in-alt"></i>Login
-          </a>
-          <a href="#" class="underline-link">
-            <i class="fas fa-envelope"></i>Contact Us
-          </a>
-        </div>
-        <label for="theme-switch" class="theme-toggle">
-          <span class="sr-only">Switch theme</span>
-          <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
-          <i class="fas fa-sun icon-light" aria-hidden="true"></i>
-        </label>
-      </nav>
-      <header>
-        <h1>
-          Top 10 Movies <br />
-          of All Time!!
-        </h1>
-        <p>
-          Welcome to the ultimate debate, the cinematic summit, the list to end
-          all lists. Attempting to rank the ten greatest films of all time is a
-          fool's errand—a beautiful, passionate, and utterly subjective quest.
-          Yet, here we are. This is our curated collection of masterpieces that
-          have not only defined cinema but have transcended it, leaving an
-          indelible mark on our culture and our hearts. These are the stories
-          that changed the way we see the world, one frame at a time.The moveis
-          which are talked about in this website are shortlisted below:-
-        </p>
-      </header>
-      <div class="op">
-        <h2>The Greatest Films Ever Made</h2>
-        <span
-          >Ranked by critical acclaim, cultural impact, and timeless
-          storytelling</span
-        >
+        <a class="logo-icon" href="index.html">
+          <img src="Images/Logo.png" alt="Logo Image" width="80px" height="80px" />
+          <h3>INDIA</h3>
+        </a>
+        <a href="index.html" class="underline-link home-link">
+          <i class="fas fa-home"></i>Home
+        </a>
+        <a href="#" class="underline-link">
+          <i class="fas fa-info-circle"></i>About
+        </a>
+        <a href="#" class="underline-link">
+          <i class="fas fa-blog"></i>Blog
+        </a>
+        <a href="#" class="underline-link">
+          <i class="fas fa-sign-in-alt"></i>Login
+        </a>
+        <a href="#" class="underline-link">
+          <i class="fas fa-envelope"></i>Contact Us
+        </a>
       </div>
-      <div class="moveis">
-        <h2>The Shawshank Redemption</h2>
-        <span>1994</span><br/>
-        <span class="ojas">
-          142 min  $58M Box Office 7 Oscar Nominations
-        </span>
+      <label for="theme-switch" class="theme-toggle">
+        <span class="sr-only">Switch theme</span>
+        <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
+        <i class="fas fa-sun icon-light" aria-hidden="true"></i>
+      </label>
+    </nav>
+    <header>
+      <h1>
+        Top 10 Movies <br />
+        of All Time!!
+      </h1>
+      <p class="p-1">
+        Welcome to the ultimate debate, the cinematic summit, the list to end
+        all lists. Attempting to rank the ten greatest films of all time is a
+        fool's errand—a beautiful, passionate, and utterly subjective quest.
+        Yet, here we are. This is our curated collection of masterpieces that
+        have not only defined cinema but have transcended it, leaving an
+        indelible mark on our culture and our hearts. These are the stories
+        that changed the way we see the world, one frame at a time.The moveis
+        which are talked about in this website are shortlisted below:-
+      </p>
+    </header>
+    <div class="op">
+      <h2 class="ramesh">The Greatest Films Ever Made</h2>
+      <span>Ranked by critical acclaim, cultural impact, and timeless
+        storytelling</span>
+    </div>
+    <div class="moveis">
+      <h2>The Shawshank Redemption</h2>
+      <span>1994</span><br />
+      <span class="ojas">
+        <span>142 min</span>
+        <span>$58M Box Office</span>
+        <span>7 Oscar Nominations</span>
+      </span>
+      <div class="anime-container">
+        <button class="anime">
+          Drama
+        </button>
+        <button class="anime">
+          Crime
+        </button>
+      </div>
+      <div class="ban">
+        <p>
+          <span>Movie Name: "The Shawshank Redemption"</span>
+          <span>Ranking position: 1 </span>
+          <span>Genre: Drama, Crime</span>
+          <span>Director: Frank Darabont</span>
+          <span>Writer: Stephen King</span>
+          <span>Stars: Tim Robbins, Morgan Freeman, Bob Gunton</span>
+          <span>Rating: 9.3/10</span>
+          <span>Runtime: 142 min</span>
+          <span>Budget: $25 million</span>
+          <span>Box Office: $28.3 million</span>
+          <span>Production Company: Castle Rock Entertainment</span>
+          <span>IMDb Rating: 9.3/10</span>
+          <span>Metacritic: 9.3/10</span>
+          <span>Awards: 7 Oscar Nominations</span>
+        </p>
+        <div class="vaibhav">
+          <h3>The Shawshank Redemption: A Story of Hope Against All Odds</h3>
+          <p style=" background: none;">
+            The Storyline: A Tale of Resilience
+            Based on Stephen King's novella Rita Hayworth and Shawshank Redemption, the film follows banker Andy
+            Dufresne, wrongfully convicted of murdering his wife and her lover, as he endures a life sentence atZ
+            Shawshank State Penitentiary. Inside the brutal prison, Andy befriends fellow inmate Ellis "Red" Redding and
+            navigates corruption, cruelty, and despair, all while secretly plotting his escape. Over 19 years, he
+            quietly chips away at his freedom, emerging not only physically but spiritually liberated. The film's core
+            message — "Hope is a good thing, maybe the best of things, and no good thing ever dies" — has resonated
+            across generations, making it an enduring symbol of resilience.<br /><br />
+
+            Budget: A Modest Beginning
+            Produced on a modest budget of $25 million, The Shawshank Redemption was far from a blockbuster production.
+            Frank Darabont, who wrote and directed the film, poured his passion into adapting King's story — paying only
+            $5,000 for the rights (a gesture King often allows for first-time adaptors). The film's financial
+            constraints were evident in its deliberate pacing and character-driven focus, yet this restraint ultimately
+            contributed to its authenticity and emotional depth.<br /><br />
+
+            Box Office & Sales: Slow Burn to Legend
+            Ironically, the film that now sits atop IMDb's Top 250 was initially a box-office disappointment. It earned
+            only $16 million during its theatrical run in 1994, failing to recoup its budget. Critics praised it, but it
+            was overshadowed by crowd-pleasers like Pulp Fiction and Forrest Gump.<br /><br />
+
+            However, through word-of-mouth, cable TV reruns (particularly on TNT), and later VHS and DVD sales,
+            Shawshank found its audience. It became a home video phenomenon, selling millions of copies and transforming
+            into a cultural touchstone. By the 2000s, it was regularly voted the #1 film of all time by audiences
+            worldwide — proving that some stories don't just find their way; they make their own.<br /><br />
+
+            Why It Endures: More Than a Movie
+            The Shawshank Redemption is more than a film; it's an experience in hope. Its journey from box-office
+            obscurity to beloved classic mirrors its own narrative — a quiet, persistent triumph against the odds.<br /><br />
+            Today, it’s not just a movie; it’s a lesson in patience, faith, and the quiet power of an unbreakable
+            spirit.<br /><br />
+          </p>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
